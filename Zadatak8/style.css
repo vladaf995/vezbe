@@ -1,0 +1,122 @@
+.container__header {
+  display: flex;
+  padding: 10px 20px 30px;
+}
+.container__header__picture > img {
+  width: 20px;
+  padding: 5px 5px 0 0;
+}
+.container__header__title {
+  border-left: 1px solid gray;
+  padding-left: 5px;
+}
+.container__header__title > h1 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+.container__header__title > p {
+  color: gray;
+  margin: 0;
+  text-transform: capitalize;
+  font-size: 10px;
+}
+.container__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+.container__wrapper__card {
+  border: 1px solid gray;
+  width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+}
+.container__wrapper__card > button {
+  border: 1px solid #ee3c25;
+  border-radius: 50px;
+  padding: 8px 30px;
+  background-color: #e8e8e8;
+  cursor: pointer;
+  position: relative;
+  margin: auto;
+  display: block;
+  top: 15px;
+}
+.container__wrapper__card__header {
+  text-align: center;
+  padding: 30px 0;
+}
+.container__wrapper__card__header > h3 {
+  color: gray;
+  margin: 0;
+}
+.container__wrapper__card__header > p {
+  color: gray;
+  margin: 0;
+}
+.container__wrapper__card__price {
+  background-color: #e8e8e8;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 54% 75%, 48% 90%, 43% 75%, 0% 75%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 54% 75%, 48% 90%, 43% 75%, 0% 75%);
+  text-align: center;
+  padding: 30px 0 70px 0;
+  font-size: 40px;
+  margin: 0;
+}
+.container__wrapper__card__price > p {
+  color: gray;
+  font-weight: bold;
+  margin: 0;
+}
+.container__wrapper__card__price > p sup,
+.container__wrapper__card__price > p sub {
+  font-size: 18px;
+}
+.container__wrapper__card__price:hover {
+  background-color: #ee3c25;
+}
+.container__wrapper__card ul,
+.container__wrapper__card li {
+  color: gray;
+  margin: 0;
+  text-align: center;
+  list-style: none;
+  padding: 0px;
+  border-bottom: 1px dashed gray;
+  padding: 10px 0;
+}
+.container__wrapper__card ul,
+.container__wrapper__card li:last-child {
+  border-bottom: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    padding: 100px;
+  }
+  .container__header {
+    display: flex;
+  }
+  .container__header__picture > img {
+    width: 50px;
+    padding: 5px 15px 0 0;
+  }
+  .container__header__title {
+    padding-left: 15px;
+  }
+  .container__header__title > h1 {
+    font-size: 35px;
+  }
+  .container__header__title > p {
+    font-size: 20px;
+  }
+  .container__wrapper {
+    justify-content: space-between;
+  }
+  .container__wrapper__card {
+    width: 24%;
+    margin-top: nono;
+  }
+}/*# sourceMappingURL=style.css.map */

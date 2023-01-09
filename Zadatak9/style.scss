@@ -1,0 +1,120 @@
+$color-blue: #0078ff;
+$color-light-blue: #cde1f8;
+$color-gray: gray;
+
+.container {
+  padding: 0 10px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    &__card {
+      width: 100%;
+      height: auto;
+
+      &__info {
+        > img {
+          width: 70%;
+          display: block;
+          margin: auto;
+        }
+
+        ul,
+        li {
+          color: $color-gray;
+
+          margin: 0;
+          list-style: none;
+          padding: 10px 0;
+        }
+      }
+
+      &__bar {
+        background-color: $color-light-blue;
+
+        width: 100%;
+
+        .color {
+          background-color: $color-blue;
+
+          height: 10px;
+          width: 85%;
+
+          &.css {
+            width: 75%;
+          }
+
+          &.php {
+            width: 50%;
+          }
+
+          &.js {
+            width: 90%;
+          }
+        }
+      }
+
+      &__percent {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+
+        > p {
+          margin: 0;
+          text-transform: uppercase;
+        }
+      }
+
+      &__about {
+        display: flex;
+        padding: 30px 0;
+        font-weight: 500;
+        font-size: 25px;
+
+        > p {
+          border-bottom: 3px solid $color-blue;
+          margin: 0;
+        }
+
+        > span {
+          padding-left: 5px;
+        }
+      }
+
+      > p {
+        color: $color-gray;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    padding: 100px;
+
+    &__wrapper {
+      &__card {
+        width: 45%;
+        margin-left: 40px;
+
+        &__info {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          > img {
+            width: 50%;
+            margin: 0;
+            padding-bottom: 10px;
+          }
+        }
+
+        &__about {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

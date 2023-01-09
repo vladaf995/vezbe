@@ -1,0 +1,126 @@
+$color-gray: gray;
+$color-yellow: #ffb600;
+$color-white: white;
+
+.container {
+  > p {
+    color: $color-gray;
+
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  > h1 {
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  ul,
+  li {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  li:hover {
+    background-color: $color-yellow;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &__card {
+      width: 100%;
+      position: relative;
+
+      > img {
+        vertical-align: top;
+        height: 30vh;
+        width: 100%;
+      }
+
+      &__info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        visibility: hidden;
+
+        &__icon {
+          background-color: $color-yellow;
+          display: inline-block;
+          position: absolute;
+          right: 0;
+
+          > img {
+            width: 20px;
+            padding: 5px;
+          }
+        }
+
+        > h3 {
+          color: $color-white;
+
+          padding: 150px 0 0 30px;
+          text-transform: uppercase;
+        }
+
+        > button {
+          background-color: $color-yellow;
+
+          padding: 8px 5px;
+          margin-left: 30px;
+          cursor: pointer;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .container__wrapper__card:hover {
+      > img {
+        filter: brightness(50%);
+      }
+
+      .container__wrapper__card__info {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    padding: 20px;
+    ul,
+    li {
+      display: flex;
+      padding: 15px;
+      margin-right: 10px;
+    }
+
+    ul {
+      padding: 0;
+      border-bottom: 2px solid $color-yellow;
+    }
+
+    &__wrapper {
+      padding-top: 40px;
+
+      &__card {
+        width: 33.33%;
+
+        > img {
+          height: 40vh;
+        }
+      }
+    }
+  }
+}
