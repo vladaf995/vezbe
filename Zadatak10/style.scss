@@ -1,6 +1,7 @@
 $color-gray: gray;
 $color-yellow: #ffb600;
 $color-white: white;
+$color-black: black;
 
 .container {
   > p {
@@ -96,9 +97,145 @@ $color-white: white;
   }
 }
 
+.footer-container {
+  background-color: $color-black;
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+
+    &__card {
+      width: 100%;
+      padding-top: 20px;
+
+      > h2 {
+        color: $color-white;
+        border-left: 3px solid $color-yellow;
+
+        margin: 0;
+        text-transform: uppercase;
+
+        padding-left: 15px;
+      }
+
+      > p {
+        color: $color-gray;
+
+        margin: 0;
+        line-height: 25px;
+        padding: 20px 0;
+      }
+
+      &__logo {
+        display: flex;
+        padding-top: 20px;
+
+        > img {
+          width: 40px;
+        }
+
+        > p {
+          color: $color-white;
+
+          margin: 0;
+          margin-left: 5px;
+          font-size: 40px;
+          font-weight: bold;
+        }
+      }
+
+      &__icon {
+        padding-top: 20px;
+
+        > img {
+          width: 20px;
+          margin-left: 10px;
+        }
+
+        :first-child {
+          margin-left: 0;
+        }
+      }
+
+      &__time {
+        display: flex;
+        justify-content: space-between;
+
+        ul,
+        li {
+          color: $color-gray;
+
+          list-style: none;
+          padding: 0;
+          padding-top: 5px;
+
+          :first-child {
+            padding-top: 0;
+          }
+        }
+
+        &.services {
+          li {
+            border-bottom: 1px solid $color-gray;
+
+            padding: 10px 0px;
+          }
+
+          :last-child {
+            border-bottom: none;
+          }
+
+          ul {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &__end {
+    background-color: $color-yellow;
+    height: auto;
+    padding-bottom: 10px;
+
+    > p {
+      text-align: center;
+      padding-top: 18px;
+    }
+
+    ul,
+    li {
+      text-align: center;
+      list-style: none;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    li:hover {
+      color: $color-white;
+    }
+
+    &__icon-top {
+      background-color: black;
+      display: inline-block;
+      position: fixed;
+      right: 30px;
+      bottom: 25px;
+
+      > a,
+      img {
+        padding: 5px;
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .container {
-    padding: 20px;
+    padding: 20px 20px 0;
+
     ul,
     li {
       display: flex;
@@ -119,6 +256,40 @@ $color-white: white;
 
         > img {
           height: 40vh;
+        }
+      }
+    }
+  }
+
+  footer {
+    padding: 0 20px;
+    .footer-container {
+      &__wrapper {
+        justify-content: space-around;
+        &__card {
+          padding: 10px;
+          width: 25%;
+        }
+      }
+
+      &__end {
+        display: flex;
+        justify-content: space-around;
+
+        > p {
+          padding-top: 0;
+        }
+
+        ul {
+          display: flex;
+
+          li {
+            padding-left: 10px;
+          }
+        }
+
+        &__icon-top {
+          bottom: 10px;
         }
       }
     }
